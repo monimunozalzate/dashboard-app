@@ -1,3 +1,6 @@
+import './ui/global.css'
+import { inter } from '@/app/ui/fonts';
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +8,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
+      <footer className="flex justify-center align-middle">
+        Made by Monica
+      </footer>
     </html>
   );
 }
